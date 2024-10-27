@@ -1,0 +1,755 @@
+
+.carrousel {
+    display: flex;
+    justify-content: center;
+    height: 70%;
+    width: 100%;
+
+    overflow: hidden; 
+}
+        .comment {
+            position: absolute;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            width: 50%;
+            margin-top: 3%;
+            color: white;
+        }
+cite {
+    margin-left: 10rem;
+    margin-right: 10rem;
+}
+
+.imageCar {
+    width: 600px; 
+    height: 300px;
+    
+} 
+.guillemet {width: 100px;}
+.images {
+    display:flex;
+    flex-shrink: 0.4;
+    animation-duration: 30s;
+    animation-name: diapo;
+    animation-iteration-count: infinite;
+    /*background-position: center;*/
+}
+
+.images > cite {
+    width: 20rem;
+}
+
+@keyframes diapo {
+    0% {
+        transform: translateX(40%);
+    }
+    10% {
+        transform: translateX(40%);
+    }
+    20% {
+        transform: translateX(20%) ;
+    }
+    30% {
+        transform: translateX(20%);
+    }
+    40% {
+        transform: translateX(0%);
+    }
+    50% {
+        transform: translateX(0%);
+    }
+    60% {
+        transform: translateX(-20%);
+    }
+    70% {
+        transform: translateX(-20%);
+    }
+    80% {
+        transform: translateX(-40%);
+    }
+    90% {
+        transform: translateX(-40%);
+    }
+    96% {
+        transform: translateX(-40%);
+    }
+    100% {
+        transform: translateX(-40%);
+    }
+ }
+
+
+/*----------------------------------------- Balise semantiques -----------------------------------------*/
+ 
+body {
+    text-align: center;
+    font-family: 'Playfair', serif;
+    background: #f9fafa;
+    font-size: 20px;
+    margin: 2px;
+}
+
+nav {
+  width: 100%;
+  height: 1.5em;
+  background: rgb(255, 211, 33);
+}
+
+h1, h2 {
+    padding: 3%;
+    margin: 0%;
+    font-size: 1.5em;
+    font-weight: 100;
+    color: rgb(18, 18, 18);
+}
+
+
+
+hr {
+    border: rgb(255, 211, 33) 5px solid;
+    width: 10%;
+    opacity: 1;
+}
+.hr_slow {
+    border: rgb(255, 211, 33) 5px solid;
+    width: 10%;
+    opacity: 0;
+    transform: translateX(-100%);
+}
+.hr_slow.active_hr {
+    transform: translateX(0%);
+    transition-property: background-color font-size transform color;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.8s;
+    opacity: 1;
+}
+
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/*----------------------------------------- Page staff -----------------------------------------*/
+
+.left_separation {
+    display: grid;
+    width: 20%;
+    height: 100%;
+    background-color: rgb(255, 211, 33);
+}
+
+.staff_page {
+    display: flex;
+    height: 35em;  /* /!\ PROVISOIRE A MODIFIER /!\ */
+}
+
+.say_hello_staff {
+    width: 100%;
+    display: grid;
+    text-align: center;
+    margin-top: 20%;
+}
+
+/*----------------------------------------- Details navigation -----------------------------------------*/
+
+
+.items_nav {
+    align-self: center;
+    cursor:pointer;                 
+    margin: 0 1%;
+    flex-shrink: 0;                /*Si plus de place en largeur, les elements vont retricir mais la a 0 sa ne bouge pas */
+}
+
+
+.liste_items_nav {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    color: black;
+    height: 100%;
+    line-height: 50px;              /*interligne*/
+    font-size: 18px;
+    letter-spacing: 3px;
+    margin: 0%;
+}
+
+.liste_items_nav :hover {
+    color:rgb(117, 117, 117);
+}
+
+/*----------------------------------------- Polices -----------------------------------------*/
+.localisation {
+    width:600px;
+    height:450px;
+}
+
+.police1 {
+    font-family: 'Kanit', sans-serif;
+    font-size: 2.5em;
+    font-weight: 100;
+}
+
+.police2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5em;
+    color: rgb(160, 160, 160);
+}
+
+.police3 {
+    font-family: 'Roboto Mince 100', sans-serif;
+    font-size: 0.7em;
+    color: rgb(160, 160, 160);
+}
+
+.police4 {
+    font-family: 'Roboto Mince 100', sans-serif;
+    color: rgb(41, 41, 41);
+}
+
+
+/*----------------------------------------- button -----------------------------------------*/
+
+.style_1 {
+    cursor:pointer;
+    color: rgb(18, 18, 18 );
+    background:  rgb(255, 211, 33 );
+    font-size: 0.8em;
+    border: none;
+    letter-spacing: 3px;
+    width: 25%;
+    height: 45%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.style_1:hover {
+    color: white;
+    background: rgb(131, 131, 131);
+    transition-duration: 0.5s;
+}
+
+
+/*----------------------------------------- index -----------------------------------------*/
+
+
+
+
+/*
+.home {
+    display: grid; 
+    grid-template-rows: 0.1fr;
+  }         
+*/
+.top_page {
+   /* grid-column:1;
+    grid-row: 1;*/
+    display: flex;
+    justify-content: space-between;
+    background-color: #f9fafa;
+  }
+
+  .design_hr_nav {
+    border-right: black 1px solid;
+    height: 50%;
+    margin: auto 3%;
+    width: 0%;
+}
+
+.slogan {
+    height: 80%;
+    display: grid;
+    grid-template-rows: repeat(3, 0.5fr);
+    color: #f9fafa;
+    
+/*-----background_effect------*/
+
+	width: 100%; height: 120vmin;
+	min-height: 15em;
+	background: linear-gradient(#000, transparent, #000), 
+		var(--img) 50%/ cover;
+	background-attachment: fixed;
+	background-blend-mode: multiply;
+	
+	&:nth-of-type(1) {
+		--img: url(../upload/background/yellow_car.jpg);
+	}
+  }
+
+  .image_brand {
+    width: 40%;
+    height: 220px;
+  }
+
+.style_slogan {
+    background-color: rgba(0, 0, 0, 0.496);
+    padding: 2%;
+    grid-row: 3;
+}
+
+.style_police_slogan{
+    font-size: 5em;
+    margin: 0%;
+}
+
+.car_brand {
+    grid-column:1;
+    grid-row: 4;
+}
+
+.service {
+    grid-column:1;
+    grid-row: 5;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 37vw;
+    transition-duration: 3s;
+    transition-property: margin-right;
+}
+
+
+.service_entretien {
+    grid-column:1;
+    grid-row: 1;
+    background-color: #1a1a1a;
+    color: #f9fafa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+
+}
+.service_entretien.active_left {
+    transform: translate(100%, 0%);
+    transition-property: background-color font-size transform color;
+    transition-timing-function: ease-in-out;
+    transition-duration: 2s;
+    opacity: 1;
+}
+
+.service_occasion {
+    grid-column:2;
+    grid-row: 1;
+    background-color:  #ffd321;
+    color: #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+.radius {
+    border-radius: 40%;
+    width: 200px;
+}
+.service_occasion.active_right {
+    transform: translate(-100%, 0%);
+    transition-property: background-color font-size transform color;
+    transition-timing-function: ease-in-out;
+    transition-duration: 2s;
+    opacity: 1;
+}
+
+/**************************Caroussel occasion.php******************************/
+.image-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-image {
+    margin-bottom: 20px;
+}
+
+.thumbnail-gallery {
+    display: flex;
+    gap: 10px;
+}
+
+.thumbnail {
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border-color 0.3s;
+}
+
+.thumbnail:hover {
+    border-color: #007bff;
+}
+
+.pixel {
+    width: 100px;  
+}
+/*=============== Section Best offer ===================*/
+
+.position_inside_grid {
+    display: grid;
+    grid-template-rows: 0.5fr 2.5fr 0.5fr;
+}    
+
+.item_top {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 15%;
+    padding-right: 15%;
+    width: 70%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 0.5fr;
+    grid-auto-rows: 0.5fr;
+    gap: 5%;
+  }
+  
+  .article_index {
+    background-color: black;
+    margin-left: auto;
+    margin-right: auto;
+    width: 17rem;
+    height: 15rem;
+  }
+
+  .article_index:hover {
+    background-color: black;
+    margin-left: auto;
+    margin-right: auto;
+    width: 15rem;
+    height: 15rem;
+  }
+
+  .button_offer {
+    grid-row: 4;
+  }
+
+/*=============== ====================*/
+
+.argument {
+    grid-column:1;
+    grid-row: 7;
+    background-color: rgb(229, 229, 229);
+    height: 10%;
+    padding: 2%;
+}
+
+.map {
+    grid-column:1;
+    grid-row: 8;
+    background-color: #3c3c3c;
+    padding: 2%;
+}
+
+.items_map {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 2%;
+}
+
+.color_title_map {
+   color: rgb(255, 211, 33);
+}
+
+.down_map {
+    width: 100%;
+    border: rgb(193, 193, 193) 1px solid;
+    margin: 0%;
+}
+.container {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-left: 15%;
+    margin-right: 15%;
+    width: 70%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr;
+    grid-auto-rows: 0.5fr 0.2fr;
+    gap: 5%;
+}
+/*----------------------------------------- avis -----------------------------------------*/
+.avis {
+background: center url("../upload/background/avis.jpg");
+display: grid;
+height: 35em;/*
+background-size: contain;*/
+background-repeat: no-repeat;
+background-size: 100% 100%;
+grid-template-columns: auto 50% auto;
+grid-template-rows: 0.1fr 0.5fr 0.5fr auto;
+}
+
+.testimony {
+    grid-row: 2;
+    grid-column: 2;
+    color: #e0e0e0;
+}
+
+.button_testimony {
+    grid-column: 2;
+    grid-row: 3;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.send_testimony{
+    text-align: center; /*rajouter voir si sa marche*/
+    cursor:pointer;
+    border: none;
+    height: 2em;
+    width: 20em; 
+    border-radius: 30px;
+    background: rgb(200, 200, 200); 
+}
+
+.send_testimony:hover {
+    color: white;
+    background: rgb(233, 192, 30);
+    transition-duration: 0.3s;
+}
+
+/*----------------------------------------- atelier -----------------------------------------*/
+
+
+.atelier_front {
+    height: 80%;
+    display: grid;
+    grid-template-rows: repeat(3, 0.5fr);
+    color: #f9fafa;
+    
+/*-----background_effect------*/
+	width: 100%; height: 55vmin;
+	min-height: 15em;
+	background: linear-gradient(#000, transparent, #000), 
+		var(--img) 50%/ cover;
+	background-attachment: fixed;
+	background-blend-mode: multiply;
+	
+	&:nth-of-type(1) {
+		--img: url(../upload/background/interieur1.jpg);
+	}
+/*
+    &:nth-of-type(2) {
+		--img: url();
+	}*/
+  }
+
+  .style_atelier {
+    padding: 2%;
+    grid-row: 2;
+}
+
+.style_police_atelier{
+    font-size: 5em;
+    margin: 0%;
+}
+
+.service_mecanique {
+    grid-column:1;
+    grid-row: 1;
+    background-color: #1a1a1a;
+    color: #f9fafa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transform: translate(100%, 0%);
+    transition-property: background-color font-size transform color;
+    transition-timing-function: ease-in-out;
+    transition-duration: 2s;
+}
+
+
+.service_carrosserie {
+    grid-column:2;
+    grid-row: 1;
+    background-color:  rgb(255, 211, 33);
+    color: #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transform: translate(-100%, 0%);
+    transition-property: background-color font-size transform color;
+    transition-timing-function: ease-in-out;
+    transition-duration: 2s;
+}
+
+/*----------------------------------------- occasion -----------------------------------------*/
+.occasion_front {
+    height: 80%;
+    display: grid;
+    grid-template-rows: repeat(3, 0.5fr);
+    color: #f9fafa;
+    
+/*-----background_effect------*/
+	width: 100%; height: 55vmin;
+	min-height: 15em;
+	background: linear-gradient(#000, transparent, #000), 
+		var(--img) 50%/ cover;
+	background-attachment: fixed;
+	background-blend-mode: multiply;
+	
+	&:nth-of-type(1) {
+		--img: url(../upload/background/interieur2.jpg);
+	}
+/*
+    &:nth-of-type(2) {
+		--img: url();
+	}*/
+  }
+
+
+/*----------------------------------------- contact -----------------------------------------*/
+
+
+form {
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-rows: 0.5fr 0.5fr 0.2fr;
+    justify-content: center;
+    margin: 5% 0% 5% 0%;
+}
+
+.input {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+
+
+.champ1 {                                                                       /*fond de champ a remplir*/                              
+    background-color: rgba(255, 255, 255, 0.716);
+    border: none;
+    height: 4em;
+    width: 20em;
+    margin-bottom: 0.5em;
+}
+
+
+textarea {
+    resize: none;
+    background-color: rgba(255, 255, 255, 0.716);
+    border: none;
+            height:6em;
+            width: 20em;
+}
+
+input[type=checkbox] {
+    appearance: none;
+    font: inherit;                                                   /* valeur utilisee pour qu'une propriete prenne la valeur calculee de la propriete pour l'element parent*/
+    color: currentColor;                                             /* currentColor = mot clef qui represente la valeur de la couleur heriter */
+    width: 1.15em;
+    height: 1.15em;
+    border: none;
+    background-color: rgba(251, 251, 251, 0.808);
+    border-radius: 0.15em;
+    transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
+  }
+  
+  .form-control {
+display: flex; 
+}
+  
+            input[type="checkbox"]::before {
+              content: "";
+              width: 0.65em;
+              height: 0.65em;
+              transform: scale(0);
+              transition: 120ms transform ease-in-out;
+              box-shadow: inset 5em 5em rgb(0, 0, 0);                       /*case cocher*/
+              transform-origin: bottom left;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);  /*possibiliter de cree se que l'on veux !! :) */
+  }
+  
+            input[type="checkbox"]:checked::before {
+              transform: scale(1);
+            }
+
+            .is-invalid {
+    border: solid 2px rgb(255, 0, 0);
+  }
+  
+  .is-valid {
+    border: solid 2px green;
+  }
+
+  .send{
+    border-radius: 30px;
+    cursor:pointer;
+    border: none;
+    height: 3em;
+    width: 20em;     
+}
+
+.send:hover {
+    color: rgb(255, 211, 33);
+    background: rgb(131, 131, 131);
+    transition-duration: 0.3s;
+}
+/*----------------------------------------- footer -----------------------------------------*/
+
+
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+/*
+footer {
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto 50% auto;
+    color: rgb(203, 196, 196);
+    background: rgb(221, 8, 8);
+    height: 20%;
+}
+
+.foot2 {
+    cursor:pointer;
+    font-size: 15px;
+    letter-spacing: 6px;
+    border: none;
+    background: none;
+    color: rgb(21, 21, 21);
+
+}
+
+.foot3 {
+    background: white;
+    padding-top: 10%;
+    padding-left: 30%;
+    padding-right: 30%;
+    padding-bottom: 5%;
+}*/
+
+.background_effect {
+        height: 80%;
+        display: grid;
+        grid-template-rows: repeat(3, 0.5fr);
+        color: #f9fafa;
+        
+    /*-----background_effect------*/
+        width: 100%; height: 80vmin;
+        min-height: 15em;
+        background: linear-gradient(#000, transparent, #000), 
+            var(--img) 50%/ cover;
+        background-attachment: fixed;
+        background-blend-mode: multiply;
+        
+        &:nth-of-type(1) {
+            --img: url(../upload/background/parking.jpg);
+        }
+}
+
+/*================ DEFILEMENT PAGE JAVASCRIPT ===================*/
+/* Now in your CSS add the following classes, this fades the [data-trigger] elements in and out*/
+/*
+.visible, .invisible {
+  opacity: 0.0;
+  transition: opacity 0.5s ease;
+}*/
+.visible {
+  opacity: 1/*.0*/;
+  transition: opacity 0.5s ease;
+  /*transform: translateX(0%);*/
+}
+
